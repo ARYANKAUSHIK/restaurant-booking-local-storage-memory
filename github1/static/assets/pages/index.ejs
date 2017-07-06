@@ -1,0 +1,31 @@
+
+<h1>Restorent App Login </h1>
+<div class="main-agileits" ng-controller="loginCtrl">
+<!--form-stars-here-->
+		<div class="form-w3-agile">
+			<h2>Credit login form</h2>
+			<form ng-controller="loginCtrl" ng-submit="authSrv.loginUser(loggedInUser, passKey)">
+				<div class="form-sub-w3">
+					<input type="text" ng-model="loggedInUser" name="Username" placeholder="Customer number or username " required="" />
+				<div class="icon-w3">
+					<i class="fa fa-user" aria-hidden="true"></i>
+				</div>
+				</div>
+				<div class="form-sub-w3">
+					<input type="password" ng-model="passKey" name="Password" placeholder="Password" required="" />
+				<div class="icon-w3">
+					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+				</div>
+				</div>
+				<p class="p-bottom-w3ls">Are you a new User?  <b><a class="w3_play_icon1" href="/register">  Register here</a></b></p>
+				
+				<a class="w3_play_icon1" href="/booking">  Book here</a>
+				<div class="submit-w3l">
+					<input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
+<!--//form-ends-here-->
+
+
+	
