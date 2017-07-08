@@ -5,16 +5,19 @@
 		<title><%= title %> -Restorent Booking Services</title>
 		<meta name="description" content="<%= description %>" />
 		<meta name="keywords"  content="<%= keywords %> " />
-         
+        <% page_css = css; %>
+        <% page_scripts = scripts; %>
+
         <%- partial('partials/head') %>
        	
-    </head>
+    </head> 
 	   
     <body id="top" data-spy="scroll" data-target=".header" data-offset="80">
 	  	<%- partial('partials/header') %>
 		<%- body %>
 		<%- partial('partials/footer') %>
+		
+		<%- partial('partials/page-scripts') %> 
 		<%- partial('partials/scripts') %>
-
     </body>
 </html> 

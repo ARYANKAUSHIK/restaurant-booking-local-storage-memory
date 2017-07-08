@@ -2,7 +2,7 @@ var config = {
 	port: 3010,
 	defaults:{
 		psize: 3000
-	},
+	}, 
 	api:{
 		//local api connection
 		// key: 'e97d4c21-0e1c-4349-9016-1151d438ff55',

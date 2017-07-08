@@ -15,6 +15,7 @@ app.get('/', routes.index);
 app.get('/booking', routes.booking);
 app.get('/register', routes.register);
 app.get('/locator', routes.locator);
+app.get('/message', routes.message);
 
 app.listen(3010);
 console.log("App server running on port 3010"); 
