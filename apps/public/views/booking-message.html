@@ -1,0 +1,23 @@
+<div class="section" style="margin-top:100px;" ng-controller="bookingCtrl">
+    <h1>BOOKING DETAILS:</h1>
+    <a href="#/locator">
+    <h3 style="color:#000;" class="text-center"><strong>Well Done!</strong></h3>
+    <h2 style="color:#000;" ><strong>Thanks for Booking Order, {{bookingSrv.bookingDetails.uName}} at {{bookingSrv.bookingDetails.hotelName}}</strong> </h2>
+    <div align="center">
+    
+    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+    <div align="left" class="col-md-4 col-sm-4 col-xs-4"> 
+        
+        <h2>Restaurent Name: {{bookingSrv.bookingDetails.hotelName}}</h2>
+        <h2>Name : {{bookingSrv.bookingDetails.uName}}</h2>
+        <h2>Email : {{bookingSrv.bookingDetails.email}}</h2>
+        <h2>PHONE :{{bookingSrv.bookingDetails.phone}}</h2>
+        <h2>TIME :{{bookingSrv.bookingDetails.time}}</h2>
+        <h2>Number of Persons :{{bookingSrv.bookingDetails.noOfPpl}}</h2>   
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+    <i class="fa fa-thumbs-up fa-5x fa-lg " alt="Foods at your Thumbs" style="font-size:10em;margin-top: 30px;color: #e40672; margin-bottom:10%;" aria-hidden="true"></i>
+    </a>
+    </div>
+</div>
