@@ -20,19 +20,8 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./build/public/js/'));
 });
 
-gulp.task('cons', function() {
-    gulp.src(['constants/*.js'])
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/constants/'));
-});
 
-gulp.task('common', function() {
-    gulp.src(['common/*.js'])
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/common/'));
-});
+
 
 // minify new images
 gulp.task('imagemin', function() {

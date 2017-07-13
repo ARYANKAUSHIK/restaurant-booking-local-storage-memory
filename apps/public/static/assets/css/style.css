@@ -59,7 +59,10 @@ h1 {
     margin-top: 8em;
 }
 .book-reservation {
-    background: rgba(10, 10, 10, 0.74);
+    background: rgba(20,30,70, 1.0);
+    -webkit-box-shadow: 20px -35px -44px -22px rgba(0,0,0,0.72);
+    -moz-box-shadow: 20px -35px -44px -22px rgba(0,0,0,0.72);
+    box-shadow: 20px -35px -44px -22px #1f181b;
     padding: 35px;
 }
 h3.tittle.reserve {

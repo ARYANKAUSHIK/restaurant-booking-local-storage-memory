@@ -7,7 +7,7 @@ app.service('locatorSrv', function($q) {
       var markers = [];
       var autocomplete;
       var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
-
+      var hostnameRegexp = new RegExp('^https?://.+?/');
   // When the user selects a city, get the place details for the city and
     // zoom the map in on the city.
     function onPlaceChanged() {

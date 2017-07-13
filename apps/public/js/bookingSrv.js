@@ -5,10 +5,11 @@ app.service('bookingSrv', function(locatorSrv, $state) {
   var s = this;
   s.bookingDetails = []
 
-  s.saveBookingDetails = function(name, email, time, noOfPpl, phone) {
-      s.bookingDetails.hotelName = locatorSrv.hotelName
+  s.saveBookingDetails = function(name, email, date, time, noOfPpl, phone) {
+      s.bookingDetails.hotelName = locatorSrv.hotelName;
       s.bookingDetails.uName = name;
       s.bookingDetails.email = email;
+      s.bookingDetails.date = date;
       s.bookingDetails.phone = phone;
       s.bookingDetails.time = time;
       s.bookingDetails.noOfPpl = noOfPpl;

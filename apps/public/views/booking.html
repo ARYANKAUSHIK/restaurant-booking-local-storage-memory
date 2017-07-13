@@ -1,5 +1,11 @@
+
+<link href="../static/assets/css/font-awesome.css" rel="stylesheet"> 
 <link href="../static/assets/css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
 <link href="../static/assets/css/style.css" rel='stylesheet' type='text/css' />
+<!--fonts--> 
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
 
 <h1> Restorent Booking Form </h1>
     <div class="bg-agile" ng-controller="bookingCtrl">
@@ -7,56 +13,53 @@
 			<form>
 					<div class="form-date-w3-agileits">
 						<label><i class="fa fa-user" aria-hidden="true"></i> Name :</label>
-						<input type="text" ng-model="name" name="name" placeholder="Your name" class="form-control" required="" autofocus/>
+						<input type="text" ng-model="name" name="name" placeholder="Your name" required="" autofocus/>
 					</div>
 					<div class="form-date-w3-agileits">
 						<label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
-						<input type="email" ng-model="email" name="email" placeholder="Your email"  class="form-control" required="" />
+						<input type="email" ng-model="email" name="email" placeholder="Your email"   required="" />
 					</div>
 
 									
+					<div class="form-date-w3-agileits">
+						<label><i class="fa fa-calendar" aria-hidden="true"></i> Date :</label>
+						<input ng-model="datepicker" class="hasDatepicker"  id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">	
+					</div> 
 
 					<div class="form-date-w3-agileits">
 							<label><i class="fa fa-clock-o" aria-hidden="true"></i> Time :</label>
-							<input ng-model="time" type="text" name="Time" class="timepicker form-control" value="Hrs:Min"
-							>	
+							<input type="time" ng-model="timepicker" id="timepicker" name="Time" class="timepicker hasWickedpicker " value="Hrs:Min">		
 					</div> 
 
 					<div class="form-date-w3-agileits">
 						<label><i class="fa fa-mobile" aria-hidden="true"></i> Mobile Number :</label>
-						<input type="text" ng-model="phone" name="mobile" class="form-control"placeholder="Your Mobile Number" required=""/>
+						<input type="text" ng-model="phone" name="mobile" placeholder="Your Mobile Number" required=""/>
 					</div>
-					<div class="corm-left-agileits-w3layouts bottom-w3ls ">
-							<label><i class="fa fa-users" aria-hidden="true"></i> No.of People :</label>
-							<select class="form-control" ng-model="noOfPpl">
-								<option>1 Person</option>
-								<option selected>2 People</option>
-								<option>3 People</option>
-								<option>4 People</option>
-								<option>More</option>
-							</select>
+					<div class="form-date-w3-agileits">
+						<label><i class="fa fa-users" aria-hidden="true"></i> No.of People :</label>
+						<input type="text" ng-model="noOfPpl" name="noOfPpl" placeholder="Total No.of People" required=""/>
 					</div>
 
 					<div class="clear"> </div>
 					<div class="make">
-						<input type="submit" ng-click="bookingSrv.saveBookingDetails(name, email, time, noOfPpl, phone)" value="Make a Booking">
+						<input type="submit" ng-click="bookingSrv.saveBookingDetails(name, email, date, time, noOfPpl, phone)" value="Make a Booking">
 					</div>
 			</form>
 		</div>
    </div>
 
-<script type="text/javascript" src="../static/assets/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="../static/assets/js/wickedpicker.js"></script>
-	<script type="text/javascript">
-		$('.timepicker').wickedpicker({twentyFour: false});
-	</script>
+		        	<script type="text/javascript" src="../static/assets/js/jquery-2.1.4.min.js"></script>
+            <script type="text/javascript" src="../static/assets/js/wickedpicker.js"></script>
+            <script type="text/javascript">
+                  $('.timepicker').wickedpicker({twentyFour: false});
+            </script>
 
 
-		<!-- Calendar -->
-<link rel="stylesheet" href="../static/assets/css/jquery-ui.css" />
-<script src="../static/assets/js/jquery-ui.js"></script>
-  <script>
-		  $(function() {
-			$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
-		  });
-  </script>
+            <!-- Calendar -->
+            <link rel="stylesheet" href="../static/assets/css/jquery-ui.css" />
+            <script src="../static/assets/js/jquery-ui.js"></script>
+            <script type="text/javascript" >
+                          $(function() {
+                              $( "#datepicker").datepicker();
+                          });
+            </script>

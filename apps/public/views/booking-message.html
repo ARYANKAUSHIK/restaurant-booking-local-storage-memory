@@ -1,23 +1,90 @@
-<div class="section" style="margin-top:100px;" ng-controller="bookingCtrl">
-    <h1>BOOKING DETAILS:</h1>
-    <a href="#/locator">
-    <h3 style="color:#000;" class="text-center"><strong>Well Done!</strong></h3>
-    <h2 style="color:#000;" ><strong>Thanks for Booking Order, {{bookingSrv.bookingDetails.uName}} at {{bookingSrv.bookingDetails.hotelName}}</strong> </h2>
-    <div align="center">
-    
-    <div class="col-md-4 col-sm-4 col-xs-4"></div>
-    <div align="left" class="col-md-4 col-sm-4 col-xs-4"> 
-        
-        <h2>Restaurent Name: {{bookingSrv.bookingDetails.hotelName}}</h2>
-        <h2>Name : {{bookingSrv.bookingDetails.uName}}</h2>
-        <h2>Email : {{bookingSrv.bookingDetails.email}}</h2>
-        <h2>PHONE :{{bookingSrv.bookingDetails.phone}}</h2>
-        <h2>TIME :{{bookingSrv.bookingDetails.time}}</h2>
-        <h2>Number of Persons :{{bookingSrv.bookingDetails.noOfPpl}}</h2>   
-    </div>
+<div class="container">  
+    <div class="section" ng-controller="bookingCtrl">
 
-    <div class="col-md-4 col-sm-4 col-xs-4"></div>
-    <i class="fa fa-thumbs-up fa-5x fa-lg " alt="Foods at your Thumbs" style="font-size:10em;margin-top: 30px;color: #e40672; margin-bottom:10%;" aria-hidden="true"></i>
-    </a>
+        <h1>BOOKING DETAILS:</h1>
+        <a href="#/locator">
+        <h3 style="color:#000;" class="text-center"><strong>Well Done!</strong></h3>
+        <h2 style="color:#000;" ><strong>Thanks for Booking Order, {{bookingSrv.bookingDetails.uName}} </strong> </h2>
+    
+    
+        <div align="center"  > 
+         <style>
+            table {
+                width:80%;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
+                text-align: center;
+            }
+             
+            th {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            td {
+                font-size: 14px;
+            }
+            table#t01 tr:nth-child(even) {
+                background-color: #eee;
+            }
+            table#t01 tr:nth-child(odd) {
+               background-color:#fff;
+            }
+            table#t01 th {
+                background-color: #3b5998;
+                color: white;
+            }
+            </style>
+
+
+            <div class="table-responsive">
+            <table id="t01">
+              <tr>
+                <th colspan="2">Booking : {{bookingSrv.bookingDetails.hotelName }}</th> 
+                
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>{{bookingSrv.bookingDetails.uName}}</td>
+                
+              </tr>
+              <tr>
+                <td>Email </td>
+                <td>{{bookingSrv.bookingDetails.email }}</td>
+                
+              </tr>
+              <tr>
+                <td>Date </td>
+                <td>{{bookingSrv.bookingDetails.date }}</td>
+                
+              </tr>
+              <tr>
+                <td>TIME</td>
+                <td>{{bookingSrv.bookingDetails.time}}</td>
+                
+              </tr>
+              <tr>
+                <td>PHONE</td>
+                <td>{{bookingSrv.bookingDetails.phone}}</td>
+                
+              </tr>
+              <tr>
+                <td>Number of Persons</td>
+                <td>{{bookingSrv.bookingDetails.noOfPpl}}</td>
+                
+              </tr>
+            </table>
+            </div>
+        </div>
+
+        <i class="fa fa-thumbs-up fa-5x fa-lg " alt="Foods at your Thumbs" style="font-size:10em;margin-top: 10px;color: #e40672; margin-bottom:2%;" aria-hidden="true"></i>
+        </a>
+    
     </div>
+  
+
 </div>
